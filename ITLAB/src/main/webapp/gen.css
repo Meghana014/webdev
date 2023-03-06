@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+label
+{
+	background-color:#489E9C ;
+	color:white;
+	border-color:white;
+}
+
+
+input
+{
+	background-color:#EAF9F9;
+	color:black;
+	border-color:white;
+}
+select
+{
+	background-color: #EAF9F9;
+	color:black;
+	border-color:white;
+}
+body
+{
+	background-image:url('generate.jpg');
+	background-repeat:repeat-y;
+}
