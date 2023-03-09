@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+h1
+{
+	text-align:center;
+	background-color:grey;
+	color:white;
+	font-size:40px;	
+	
+}
+h2
+{
+	text-align:center;
+	background-color:#ff8040;
+	color:white;
+	font-size:30px;
+	height:40px
+}
+h5
+{
+	text-align:center;
+	background-color:grey;
+	color:white;
+	font-size:20px;
+	height:30px
+	
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<script src="register.js"></script>
+<link rel="stylesheet" href="register.css">
+<link rel = "icon" href ="logo.png" type = "image/x-icon">
+</head>
+<body  style="background-image:url('welcome.png');background-repeat:no-repeat;background-size:700px 800px">
+
+        <table align="right" style="margin-right:300px;">
+            <marquee direction="down" scrollamount="2" style="color:#795294;font-size:20px;text-align:right">If You Are New User To This Site "Register" Here</marquee>
+           <br>
+            <img src="logo.png" align="right" width=50px"> 
+           <h2><a href="Home1.html" style="background-color: white;margin-left:1200px">Home</a></h2>
+           <h1 style="color:blue;margin-left:750px;font-size:80px;text-shadow: 4px 2px">SIGN IN</h1>
+            <form name="f" method="post" action="RegisterServlet">
+            <tr></tr><tr></tr><tr></tr>
+                <tr><td style="background-color:#47509B;color:white">Service.NO</td><td></td><td><input type="text" name="sno" placeholder="unique service number"></td></tr>
+                <tr><td style="background-color:#47509B;color:white">FirstName</td><td></td><td><input type="text" name="fname" placeholder="Enter Firstname" ></td></tr>
+                <tr><td style="background-color:#47509B;color:white">LastName</td><td></td><td><input type="text" name="lname" placeholder="Enter lastname"></td></tr>
+                <tr><td style="background-color:#47509B;color:white">Mobile</td><td></td><td><input type="text" name="ph" placeholder="enter mobile number"></td></tr>
+                <tr><td style="background-color:#47509B;color:white">Mail</td><td></td><td><input type="text" name="mail" placeholder="enter mail ID"></td></tr>
+                <tr><td style="background-color:#47509B;color:white">Gender</td><td></td><td><input type="radio" name="m">Male
+                                        <input type="radio" name="m">Female</td></tr>
+                <tr><td style="background-color:#47509B;color:white">Password</td><td></td><td><input type="password" name="pass" placeholder="set password"></td></tr>
+                <tr><td></td><td></td><td><input type="password" name="pass1" placeholder="re-enter password"></td></tr>
+                <tr>
+                    <td><input type="reset" value="clear"></td>
+                </tr>
+                <tr><td colspan=2 style="text-align:center"><input type="submit" value="SIGN IN" onClick="validatereg()" style="background-color:blue;color:white;width:150px;border-color:white"></td></tr>
+            </form>
+ 
+        </table><br>
+
+</body>
+</html>

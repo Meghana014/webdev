@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+<link rel = "icon" href ="logo.png" type = "image/x-icon">
+</head>
+<script>
+function validatelog()
+{
+    if(f.sid.value=="" || f.pass.value==" ")
+        {
+           alert("you must provide all values!!");
+           f.sid.focus();
+           return false;
+        }	
+    if(f.pass.value<6)
+        {
+        alert("password must be 6 digits!!");
+        f.pass.focus();
+        return false;
+        }
+}
+
+</script>
+<body style="color:white;background-image:url('login.jpg');font-size:25px;">
+            <a href="Home1.html" style="background-color: white">Home</a>
+            <table align="center">
+                <form name="f" action="loginServlet" method="post">
+                    <br><br><br>
+                    <tr><th><h2>Login Form</h2></th></tr>
+                    <tr><td>Service.NO</td><td><input type="text" name="sid"></td></tr>
+                    <tr><td>Password</td><td><input type="password" name="pass"></td></tr>
+                    <tr><td colspan=2><input type="submit" value="LOGIN" onClick="validatelog()" style="background-color:blue;color:white;border-color:white;width:380px" ></td></tr>
+                    <tr><td>New User?</td><td><a href="Register.html" style="background-color: white">Register here</a></td></tr>
+                    <tr></tr>
+                    
+                </form>
+            </table>
+           
+           
+</body>
+</html>

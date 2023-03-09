@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>payment</title>
+<link rel = "icon" href ="logo.png" type = "image/x-icon">
+<link rel="stylesheet" href="Pay.css">
+<script>
+function validatepay()
+{
+	flag=false
+    for(i=0;i<f.pay.length;i++)
+    {
+       if(f.pay[i].checked)
+        flag=true;
+    }
+    if(!(flag))
+    {
+        alert("Please choose payment type");
+        return false;
+    }
+    //
+    if(f.serv.value=="")
+        {
+         alert("Enter the service number");
+         f.serv.focus();
+         return false;
+        }
+    if(f.cost.value=="")
+        {
+        alert("please Enter cost in rupees");
+        f.unit.focus();
+        return false;
+        }
+    if(f.type.value=="select")
+	{
+	alert("please select the payment mode");
+	f.type.focus();
+	return false;
+	}
+	if(f.ctype.value=="select")
+	{
+		alert("please select the connection type");
+		f.ctype.focus();
+		//return false;
+	}
+	if(f.pin.value=="")
+    {
+	  alert("please enter the pin");
+	  f.cost.focus();
+	  return false;
+	}
+	else
+		{
+		  document.getElementById("result").innerHTML="You Have Paid the Bill SuccessFully";
+		}
+	
+    
+}
+</script>
+</head>
+<body style="background-image:url(payment.jpg); background-repeat:no-repeat;background-size:1400px 700px">
+<h1 align="center" style="background-color:#BBC4F0;color:white">Payment</h1>
+<table>
+<form name="f" method="post" action="paymentServlet">
+<tr class="radio1"><td><input type="radio" name="pay"><label>Prepaid </label></td>
+      <td><input type="radio" name="pay"><label>Postpaid</label></td></tr>
+       <tr><td colspan=2 style="text-align:center";><h1>BILL</h1></td></tr>
+      <tr><td><label>Service.NO</label></td><td><input type="text" name="serv"></td></tr>
+      <tr><td><label>Payable AMT(in rupees)</label></td><td><input type="text" name="cost"></td></tr>
+      <tr><td><label>Payment</label></td>
+           <td><select name="type">
+           <option>select</option>
+              <option>Paytm</option>
+              <option>GooglePay</option>
+              <option>PhonePay</option>
+              <option>debitCard/creditCard</option>
+            </select></td></tr>
+       <tr><td><label>Connection Type</label></td>
+           <td><select name="ctype">
+           <option>select</option>
+              <option>Domestic</option>
+              <option>Commercial</option>
+            </select></td></tr>
+       <tr><td><label>Acc PINNo</label></td><td><input type="text" name="pin"></td></tr>
+       <tr><td colspan=2><input type="submit" value="Pay" onClick="validatepay()" style="background-color:#75BE75;width:300px;color:white;">
+       
+       <tr><th><input type="reset" value="clear"></th></tr>
+  
+</form>
+</table>
+<a href="Home1.html" style="background-color:white">Home</a>
+
+</body>
+</html>

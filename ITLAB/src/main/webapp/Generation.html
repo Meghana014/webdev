@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Bill Generation</title>
+<link rel="stylesheet" href="generate.css">
+<link rel = "icon" href ="logo.png" type = "image/x-icon">
+</head>
+<script>
+function validategen()
+{
+	if(f.sno.value=="")
+		{
+		alert("please enter the service number");
+		f.sno.focus();
+		return false;
+		}
+	if(f.units.value=="")
+		{
+		alert("please enter Number of units");
+		f.units.focus();
+		return false;
+		}
+	if(f.type.value=="select")
+		{
+		alert("please select the connection type");
+		f.type.focus();
+		return false;
+		}
+	if(f.phase.value=="select")
+		{
+		alert("please select the connection phase");
+		f.phase.focus();
+		return false;
+		}
+	 
+}
+	
+
+</script>
+<body  style="background-image:url('bill.jpg');background-repeat:no-repeat;background-size:500px 700px;">
+
+<table align="center" style="width:30%;margin-top:100px">
+   <h1 style="text-align:center;">Bill Generation</h1>
+   <form name="f" method="post" action="BillgenerationServlet">
+       <tr><td><label>Service.No</label></td><td><input type="text" name="sno" placeholder="Unique Service Number"></td></tr>
+       <tr><td><label>Owner Name</label></td><td><input type="text" name="name" placeholder="enter name"></td></tr>  
+       <tr><td><label>Units</label></td><td><input type="text" name="units" placeholder="Units Consumed"></td></tr>
+       <tr><td><label>Previous Reading date</label></td><td><input type="date" name="preading"></td></tr>
+       <tr><td><label>current Reading date</label></td><td><input type="date" name="creading"></td></tr>
+       <tr></tr><td><label>Connection Type</label></td>
+         <td><select name="ctype">
+             <option>select</option>
+             <option>domestic</option>
+             <option>commercial</option>
+           </select></td>
+           <tr><td><label>Meter Phase</label></td>
+           <td><select name="phase">
+                  <option>select</option>
+                  <option>Single phase Meter</option>
+                  <option>Three phase Meter</option>
+            </select></td>
+       </tr>
+            <tr><td colspan=2 style="text-align:center;background-color: gray"><input type="reset" value="clear" "></td></tr>
+            <tr><td colspan=2 style="background-color:green;text-align:center"><input type="submit" value="submit" onClick="validategen()" ></th></tr>      
+   </form>
+</table>
+      <a href="Home1.html">Home</a>
+
+
+</body>
+</html>

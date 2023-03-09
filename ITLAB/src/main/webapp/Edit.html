@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Edit Existing User</title>
+<link rel="stylesheet" href="edit.css">
+<link rel = "icon" href ="logo.png" type = "image/x-icon">
+</head>
+<script src="register.js"></script>
+<body>
+ <table align="center" style='border-top:100px;'>
+            <br><br>
+            <h1 style="background-color:blue;text-align:center;color:white">Edit FORM</h1>
+            <marquee direction="down" scrollamount="2" style="color:red;font-size:20px">If you are existing User then you can edit details here..</marquee>
+            
+            <form name="f" method="post" action="editservlet">
+                <br> 
+                <tr><td style='background-color:blue;color:white;'>Service.NO</td><td></td><td><input type="text" name="sno" placeholder="Existing unique service number"></td></tr>
+                 <tr><td style='background-color:blue;color:white;'>FirstName</td><td></td><td><input type="text" name="fname" placeholder="Enter Firstname" ></td></tr>
+                <tr><td style='background-color:blue;color:white;'>LastName</td><td></td><td><input type="text" name="lname" placeholder="Enter lastname"></td></tr>
+                <tr><td style='background-color:blue;color:white;'>Mobile</td><td></td><td><input type="text" name="ph" placeholder="enter mobile number"></td></tr>
+                <tr><td style='background-color:blue;color:white;'>Mail</td><td></td><td><input type="text" name="mail" placeholder="enter mail ID"></td></tr>
+                <tr><td style='background-color:blue;color:white;'>Gender</td><td></td><td><input type="radio" name="m">Male
+                                        <input type="radio" name="m">Female</td></tr>
+                <tr><td style='background-color:blue;color:white;'>Password</td><td></td><td><input type="password" name="pass" placeholder="set password"></td></tr>
+                <tr><td></td><td></td><td><input type="password" name="pass1" placeholder="re-enter password"></td></tr>
+                <tr>
+                    <td><input type="reset" value="clear"></td>
+                    <td><input type="button" value="Validate" onClick="validatereg()"></td>
+                </tr>
+                <tr><td colspan=2><input type="submit" value="Register" style="background-color:blue;color:white;width:150px;border-color:white"></td></tr>
+            </form>            
+        </table><br>
+        <a href="Home1.html" style="background-color: white">Home</a>
+        
+</body>
+</html>

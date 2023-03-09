@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+input[type="text"]
+{
+	background-color:#BABEE2;
+	color:white;
+	border-color:white;
+}
+input[type="password"]
+{
+	background-color:#BABEE2;
+	color:white;
+	border-color:white;
+}

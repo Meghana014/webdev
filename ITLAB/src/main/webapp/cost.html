@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>cost conversion</title>
+<link rel="stylesheet" href="cost.css">
+</head>
+<script>
+function generatecost()
+{
+	if(f.units.value=="" || f.ctype.value=="")
+	{
+		alert("You must enter all fields")
+		return false
+	}
+    var units=f.units.value
+    var type=f.ctype.value
+    if(units<500 && type=='domestic')
+        {
+           ans=units*1.90
+           document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+        }
+    else if(units>500 && type=='domestic')
+    {
+       ans=units*2.90
+       document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+    }
+    else if(units>1500 && type=='domestic')
+    {
+       ans=units*4.90
+       document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+    }
+    else if(units<1000 && type=='commercial')
+    {
+       ans=units*2.50
+       document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+    }
+    else if(units>1000 && type=='commercial')
+    {
+       ans=units*3.50
+       document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+    }
+    else if(units>3000 && type=='commercial')
+    {
+       ans=units*5.90
+       document.getElementById("cost").innerHTML="---Bill Amount That Have to Pay---rs"+ans
+    }
+    
+}
+</script>
+<body>
+<h1 style="background-color:green;color:white;text-align:center">Generate Cost</h1></th></tr>
+<table align="center">
+<form name="f">
+  <tr><td><label>No.Of Units</label></td><td><input type="text" name="units" placeholder="Enter number of units"></td></tr>
+  <tr><td><label>ConnectionType</label></td><td><input type="text" name="ctype" placeholder="Domestic/commercial"></td></tr>
+  <tr><td colspan=2><input type="button" value="Check Cost" onClick="generatecost()">
+  <tr><td><input type="reset" value="clear">
+</form>
+</table>
+<b align="center" id="cost" style="background-color:#F84E5D;font-size:35px;" ></b><br>
+
+<img src="cost.jpg" width=500px height=400px>
+
+</body>
+</html>
