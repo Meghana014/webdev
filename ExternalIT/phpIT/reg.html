@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="regvalidation.js"> </script>
+
+<form name="f" onsubmit="return frmvalidation()" method="post" action="regservlet"> <center>
+
+<table>
+
+<caption><br><h3> Registration Form<br></h3><br></caption> <tr>
+
+<td>Name:</td>
+
+<td><input type="text" name="name"><br></td> </tr>
+
+<tr>
+
+<td>Password:</td>
+
+<td><input type="password" name="psd"><br></td> </tr>
+
+<tr>
+<td>Email id:</td>
+
+<td><input type="text" name="email"><br></td> </tr>
+
+<tr>
+<td>Phone No:</td>
+
+<td><input type="text" name="phno"><br></td> </tr>
+<tr>
+
+<td valign="top">Gender:</td> <td>
+
+<input type="radio" name="gender" value="Male">Male<br> <input type="radio" name="gender" value="Female">Female<br>
+
+</td>
+</tr>
+
+<tr>
+<td>Date of Birth:</td>
+ <td><input type="date" name="d"></td>
+</tr>
+
+<tr>
+
+<td>Languages<br>Known:</td> <td><input type="checkbox" name="lang">Telugu<br>
+
+<input type="checkbox" name="lang">Hindi<br> <input type="checkbox" name="lang">English<br>
+
+</td>
+</tr>
+<tr>
+
+<td>Address</td>
+
+<td><textarea name="address"></textarea><br></td> </tr>
+
+<tr>
+<td>Credit CardNo:</td>
+
+<td><input type="text" name="credit"><br></td> </tr>
+
+<tr>
+
+<td><input type="submit" value="Submit"></td> <td><input type="reset" value="Reset"></td> </tr>
+
+</table>
+</center>
+
+</form>
+
+
+</body>
+</html>
